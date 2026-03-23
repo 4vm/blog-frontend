@@ -1,7 +1,7 @@
 import { Routes, Route } from 'react-router-dom';
 import { Home } from './pages/Home';
 import { Login } from './pages/Login';
-import { Header } from './components/Header/Header';
+import { Header } from './components/Header';
 import { PostDetail } from './pages/PostDetail';
 import { CreateEditPost } from './pages/CreateEditPost';
 import { AdminDashboard } from './pages/AdminDashboard';
@@ -21,8 +21,8 @@ function App() {
         <Route element={<ProtectedRoute />}>
           <Route path="/create" element={<CreateEditPost />} />
           <Route path="/edit/:id" element={<CreateEditPost />} />        
+          <Route path="/admin" element={<AdminDashboard />} />
         </Route>
-        <Route path="/admin" element={<AdminDashboard />} />
         
       </Routes>
     </>
