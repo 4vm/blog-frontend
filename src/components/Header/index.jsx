@@ -34,7 +34,7 @@ export const Header = () => {
   const handleLogout = () => {
     localStorage.removeItem('token');
     setAuth({ isLoggedIn: false, role: null });
-    window.location.href = '/login';
+    navigate('/login');
   };
 
   const isNotHome = location.pathname !== '/';
